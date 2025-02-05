@@ -11,7 +11,7 @@ using Pokemon.Api.Data;
 namespace Pokemon.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250205132340_InitialMigration")]
+    [Migration("20250205134840_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -26,6 +26,9 @@ namespace Pokemon.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("PokemonId")
                         .HasColumnType("INTEGER");
 
@@ -37,7 +40,6 @@ namespace Pokemon.Api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -52,6 +54,9 @@ namespace Pokemon.Api.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
 
                     b.Property<int?>("EvolutionId")
                         .HasColumnType("INTEGER");
@@ -69,7 +74,6 @@ namespace Pokemon.Api.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -92,12 +96,14 @@ namespace Pokemon.Api.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

@@ -21,7 +21,8 @@ namespace Pokemon.Api.Migrations
                     Type = table.Column<string>(type: "TEXT", nullable: false),
                     SpriteBase64 = table.Column<string>(type: "TEXT", nullable: false),
                     EvolutionId = table.Column<int>(type: "INTEGER", nullable: true),
-                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -42,7 +43,8 @@ namespace Pokemon.Api.Migrations
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Age = table.Column<int>(type: "INTEGER", nullable: false),
                     Cpf = table.Column<string>(type: "TEXT", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -58,7 +60,8 @@ namespace Pokemon.Api.Migrations
                     TrainerId = table.Column<int>(type: "INTEGER", nullable: false),
                     PokemonId = table.Column<int>(type: "INTEGER", nullable: false),
                     PokemonName = table.Column<string>(type: "TEXT", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

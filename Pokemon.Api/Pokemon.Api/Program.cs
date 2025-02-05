@@ -1,9 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Pokemon.Api.Data;
+using Pokemon.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpClient<PokemonService>();
+builder.Services.AddScoped<TrainerService>();
+builder.Services.AddScoped<CaptureService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("AppConnection")));

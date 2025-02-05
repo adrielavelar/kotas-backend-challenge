@@ -9,7 +9,6 @@ namespace Pokemon.Api.Data
 
         public DbSet<Trainer> Trainers { get; set; }
         public DbSet<Capture> Captures { get; set; }
-        public DbSet<Models.Pokemon> Pokemons { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
